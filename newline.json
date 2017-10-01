@@ -1,0 +1,34 @@
+{
+  "title": "Complex Modifications",
+  "rules": [
+    {
+      "description": "Ctrl-m to return",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "m",
+            "modifiers": {
+              "mandatory": [
+                "control"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "return_or_enter"
+            }
+          ],
+	  "conditions": [
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^org\\.gnu\\.Emacs"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

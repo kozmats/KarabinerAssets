@@ -1,0 +1,34 @@
+{
+  "title": "Complex Modifications",
+  "rules": [
+    {
+      "description": "Ctrl-g to escape",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "g",
+            "modifiers": {
+              "mandatory": [
+                "control"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "escape"
+            }
+          ],
+	  "conditions": [
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^org\\.gnu\\.Emacs"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
