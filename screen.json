@@ -2,7 +2,7 @@
   "title": "Complex Modifications",
   "rules": [
     {
-      "description": "Ctrl-l で スクリーンセーバーを起動する",
+      "description": "Ctrl-Shift-l で スクリーンセーバーを起動する",
       "manipulators": [
         {
           "type": "basic",
@@ -10,7 +10,7 @@
             "key_code": "l",
             "modifiers": {
               "mandatory": [
-                "control"
+                "control", "shift"
               ]
             }
           },
