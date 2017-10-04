@@ -2,7 +2,7 @@
   "title": "Complex Modifications",
   "rules": [
     {
-      "description": "Ctrl-j to kana",
+      "description": "Ctrl-j to kana (only iTerm2)",
       "manipulators": [
         {
           "type": "basic",
@@ -18,7 +18,15 @@
             {
               "key_code": "japanese_kana"
             }
-          ]
+          ],
+	  "conditions": [
+	    {
+	      "type": "frontmost_application_if",
+	      "bundle_identifiers": [
+		"^com\\.googlecode\\.iterm2"
+	      ]
+	    }
+	  ]
         }
       ]
     }
