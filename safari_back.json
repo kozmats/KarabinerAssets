@@ -1,0 +1,38 @@
+{
+  "title": "Complex Modifications",
+  "rules": [
+    {
+      "description": "Ctrl-Shift-b で Safari の戻る",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "b",
+            "modifiers": {
+              "mandatory": [
+                "control",
+                "shift"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "open_bracket",
+              "modifiers": [
+                "command"
+              ]
+            }
+          ],
+	  "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^com\\.apple\\.Safari"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

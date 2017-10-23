@@ -1,0 +1,38 @@
+{
+  "title": "Complex Modifications",
+  "rules": [
+    {
+      "description": "Ctrl-Shift-f で Safari の進む",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "f",
+            "modifiers": {
+              "mandatory": [
+                "control",
+                "shift"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "close_bracket",
+              "modifiers": [
+                "command"
+              ]
+            }
+          ],
+	  "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^com\\.apple\\.Safari"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
