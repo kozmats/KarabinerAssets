@@ -1,0 +1,26 @@
+{
+  "title": "Complex Modifications",
+  "rules": [
+    {
+      "description": "Ctrl-i to Tab",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "i",
+            "modifiers": {
+              "mandatory": [
+                "command"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "tab"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

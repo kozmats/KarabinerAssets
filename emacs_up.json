@@ -23,7 +23,9 @@
 	    {
 	      "type": "frontmost_application_unless",
 	      "bundle_identifiers": [
-		"^org\\.gnu\\.Emacs"
+		"^org\\.gnu\\.Emacs",
+                "^com\\.google\\.android\\.studio",
+                "^com\\.googlecode\\.iterm2"
 	      ]
 	    }
 	  ]

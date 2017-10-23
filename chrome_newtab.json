@@ -2,12 +2,12 @@
   "title": "Complex Modifications",
   "rules": [
     {
-      "description": "Ctrl-t で chrome に新規タブを",
+      "description": "Ctrl-w で chrome のタブを閉じる",
       "manipulators": [
         {
           "type": "basic",
           "from": {
-            "key_code": "t",
+            "key_code": "w",
             "modifiers": {
               "mandatory": [
                 "control"
@@ -16,7 +16,7 @@
           },
           "to": [
             {
-              "key_code": "t",
+              "key_code": "w",
               "modifiers": [
                 "command"
               ]
@@ -26,7 +26,8 @@
             {
               "type": "frontmost_application_if",
               "bundle_identifiers": [
-                "^com\\.google\\.Chrome"
+                "^com\\.google\\.Chrome",
+                "^com\\.apple\\.Safari"
               ]
             }
           ]

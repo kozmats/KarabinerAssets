@@ -2,12 +2,12 @@
   "title": "Complex Modifications",
   "rules": [
     {
-      "description": "Ctrl-n to down arrow",
+      "description": "Ctrl-v to paste",
       "manipulators": [
         {
           "type": "basic",
           "from": {
-            "key_code": "n",
+            "key_code": "v",
             "modifiers": {
               "mandatory": [
                 "control"
@@ -16,7 +16,10 @@
           },
           "to": [
             {
-              "key_code": "down_arrow"
+              "key_code": "v",
+              "modifiers": [
+                "command"
+              ]
             }
           ],
 	  "conditions": [

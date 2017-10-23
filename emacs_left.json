@@ -2,12 +2,12 @@
   "title": "Complex Modifications",
   "rules": [
     {
-      "description": "Ctrl-n to down arrow",
+      "description": "Ctrl-b to left arrow",
       "manipulators": [
         {
           "type": "basic",
           "from": {
-            "key_code": "n",
+            "key_code": "b",
             "modifiers": {
               "mandatory": [
                 "control"
@@ -16,7 +16,7 @@
           },
           "to": [
             {
-              "key_code": "down_arrow"
+              "key_code": "left_arrow"
             }
           ],
 	  "conditions": [
