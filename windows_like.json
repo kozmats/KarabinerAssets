@@ -1,13 +1,13 @@
 {
-  "title": "Tab controls",
+  "title": "Windows like controls",
   "rules": [
     {
-      "description": "Ctrl-t でタブを開く",
+      "description": "Ctrl-c to copy",
       "manipulators": [
         {
           "type": "basic",
           "from": {
-            "key_code": "t",
+            "key_code": "c",
             "modifiers": {
               "mandatory": [
                 "control"
@@ -16,32 +16,32 @@
           },
           "to": [
             {
-              "key_code": "t",
+              "key_code": "c",
               "modifiers": [
                 "command"
               ]
             }
           ],
 	  "conditions": [
-            {
-              "type": "frontmost_application_if",
-              "bundle_identifiers": [
-                "^com\\.google\\.Chrome",
-                "^com\\.apple\\.Safari",
+	    {
+	      "type": "frontmost_application_unless",
+	      "bundle_identifiers": [
+		"^org\\.gnu\\.Emacs",
+                "^com\\.google\\.android\\.studio",
                 "^com\\.googlecode\\.iterm2"
-              ]
-            }
-          ]
+	      ]
+	    }
+	  ]
         }
       ]
     },
     {
-      "description": "Ctrl-w でタブを閉じる",
+      "description": "Ctrl-v to paste",
       "manipulators": [
         {
           "type": "basic",
           "from": {
-            "key_code": "w",
+            "key_code": "v",
             "modifiers": {
               "mandatory": [
                 "control"
@@ -50,32 +50,32 @@
           },
           "to": [
             {
-              "key_code": "w",
+              "key_code": "v",
               "modifiers": [
                 "command"
               ]
             }
           ],
 	  "conditions": [
-            {
-              "type": "frontmost_application_if",
-              "bundle_identifiers": [
-                "^com\\.google\\.Chrome",
-                "^com\\.apple\\.Safari",
+	    {
+	      "type": "frontmost_application_unless",
+	      "bundle_identifiers": [
+		"^org\\.gnu\\.Emacs",
+                "^com\\.google\\.android\\.studio",
                 "^com\\.googlecode\\.iterm2"
-              ]
-            }
-          ]
+	      ]
+	    }
+	  ]
         }
       ]
     },
     {
-      "description": "Ctrl-r でリロード",
+      "description": "Ctrl-x to cut",
       "manipulators": [
         {
           "type": "basic",
           "from": {
-            "key_code": "r",
+            "key_code": "x",
             "modifiers": {
               "mandatory": [
                 "control"
@@ -84,21 +84,22 @@
           },
           "to": [
             {
-              "key_code": "r",
+              "key_code": "x",
               "modifiers": [
                 "command"
               ]
             }
           ],
 	  "conditions": [
-            {
-              "type": "frontmost_application_if",
-              "bundle_identifiers": [
-                "^com\\.google\\.Chrome",
-                "^com\\.apple\\.Safari"
-              ]
-            }
-          ]
+	    {
+	      "type": "frontmost_application_unless",
+	      "bundle_identifiers": [
+		"^org\\.gnu\\.Emacs",
+                "^com\\.google\\.android\\.studio",
+                "^com\\.googlecode\\.iterm2"
+	      ]
+	    }
+	  ]
         }
       ]
     }

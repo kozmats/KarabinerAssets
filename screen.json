@@ -1,5 +1,5 @@
 {
-  "title": "Complex Modifications",
+  "title": "ScreenSaver",
   "rules": [
     {
       "description": "Ctrl-Shift-l で スクリーンセーバーを起動する",
@@ -10,7 +10,8 @@
             "key_code": "l",
             "modifiers": {
               "mandatory": [
-                "control", "shift"
+                "control",
+                "shift"
               ]
             }
           },
@@ -18,13 +19,21 @@
             {
 	      "shell_command": "open /System/Library/Frameworks/ScreenSaver.framework/Resources/ScreenSaverEngine.app"
             }
-          ],
-	  "conditions": [
+          ]
+        }
+      ]
+    },
+    {
+      "description": "insert で スクリーンセーバーを起動する",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "insert"
+          },
+          "to": [
             {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": [
-                "^org\\.gnu\\.Emacs"
-              ]
+	      "shell_command": "open /System/Library/Frameworks/ScreenSaver.framework/Resources/ScreenSaverEngine.app"
             }
           ]
         }

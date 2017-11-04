@@ -1,0 +1,241 @@
+{
+  "title": "Emacs like keybinds",
+  "rules": [
+    {
+      "description": "Ctrl-g to escape",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "g",
+            "modifiers": {
+              "mandatory": [
+                "control"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "escape"
+            }
+          ],
+	  "conditions": [
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^org\\.gnu\\.Emacs"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Ctrl-m to return",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "m",
+            "modifiers": {
+              "mandatory": [
+                "control"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "return_or_enter"
+            }
+          ],
+	  "conditions": [
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^org\\.gnu\\.Emacs"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Ctrl-i to Tab",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "i",
+            "modifiers": {
+              "mandatory": [
+                "command"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "tab"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Ctrl-j to kana (only iTerm2)",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "j",
+            "modifiers": {
+              "mandatory": [
+                "control"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "japanese_kana"
+            }
+          ],
+	  "conditions": [
+	    {
+	      "type": "frontmost_application_if",
+	      "bundle_identifiers": [
+		"^com\\.googlecode\\.iterm2"
+	      ]
+	    }
+	  ]
+        }
+      ]
+    },
+    {
+      "description": "Ctrl-p to up arrow",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "p",
+            "modifiers": {
+              "mandatory": [
+                "control"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "up_arrow"
+            }
+          ],
+	  "conditions": [
+	    {
+	      "type": "frontmost_application_unless",
+	      "bundle_identifiers": [
+		"^org\\.gnu\\.Emacs",
+                "^com\\.google\\.android\\.studio",
+                "^com\\.jetbrains\\.intellij\\.ce",
+                "^com\\.googlecode\\.iterm2"
+	      ]
+	    }
+	  ]
+        }
+      ]
+    },
+    {
+      "description": "Ctrl-n to down arrow",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "n",
+            "modifiers": {
+              "mandatory": [
+                "control"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "down_arrow"
+            }
+          ],
+	  "conditions": [
+	    {
+	      "type": "frontmost_application_unless",
+	      "bundle_identifiers": [
+		"^org\\.gnu\\.Emacs",
+                "^com\\.google\\.android\\.studio",
+                "^com\\.jetbrains\\.intellij\\.ce",
+                "^com\\.googlecode\\.iterm2"
+	      ]
+	    }
+	  ]
+        }
+      ]
+    },
+    {
+      "description": "Ctrl-b to left arrow",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "b",
+            "modifiers": {
+              "mandatory": [
+                "control"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "left_arrow"
+            }
+          ],
+	  "conditions": [
+	    {
+	      "type": "frontmost_application_unless",
+	      "bundle_identifiers": [
+		"^org\\.gnu\\.Emacs",
+                "^com\\.google\\.android\\.studio",
+                "^com\\.jetbrains\\.intellij\\.ce",
+                "^com\\.googlecode\\.iterm2"
+	      ]
+	    }
+	  ]
+        }
+      ]
+    },
+    {
+      "description": "Ctrl-f to right arrow",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "f",
+            "modifiers": {
+              "mandatory": [
+                "control"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "right_arrow"
+            }
+          ],
+	  "conditions": [
+	    {
+	      "type": "frontmost_application_unless",
+	      "bundle_identifiers": [
+		"^org\\.gnu\\.Emacs",
+                "^com\\.google\\.android\\.studio",
+                "^com\\.jetbrains\\.intellij\\.ce",
+                "^com\\.googlecode\\.iterm2"
+	      ]
+	    }
+	  ]
+        }
+      ]
+    }
+  ]
+}
